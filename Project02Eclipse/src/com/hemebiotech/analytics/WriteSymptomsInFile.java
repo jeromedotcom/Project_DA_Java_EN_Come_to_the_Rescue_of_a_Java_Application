@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.FileWriter;
 import java.util.TreeMap;
 import java.util.Map;
+import static com.hemebiotech.analytics.Constants.filepathResults;
 
 public class WriteSymptomsInFile implements ISymptomsWriter {
 
@@ -20,7 +21,7 @@ public class WriteSymptomsInFile implements ISymptomsWriter {
     public void writeSymptoms() {
         try {
 
-            FileWriter writer = new FileWriter("results.out");
+            FileWriter writer = new FileWriter(filepathResults);
 
             for (Map.Entry<String, Integer> element : result.entrySet()) {
                 writer.write(element.getKey() + " : " + element.getValue() + '\n');
