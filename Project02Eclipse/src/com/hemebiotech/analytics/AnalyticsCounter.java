@@ -15,7 +15,6 @@ public class AnalyticsCounter {
 	public static void main(String[] args) throws Exception {
 
 		// read symptoms from a file
-		//String filepath = "Project02Eclipse/symptoms.txt";
 		ReadSymptomsDataFromFile readSymptomsDataFromFile = new ReadSymptomsDataFromFile(filepathSymptoms);
 		List<String> symptoms = readSymptomsDataFromFile.getSymptoms();
 
